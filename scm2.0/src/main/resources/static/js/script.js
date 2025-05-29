@@ -19,4 +19,9 @@ function toggleTheme() {
     ? setThemetoLocalStorage("dark")
     : setThemetoLocalStorage("light");
 }
-toggleTheme();
+document.querySelector("#theme_change_button").addEventListener("click", () => {
+  toggleTheme();
+});
+// document.addEventListener("DOMContentLoaded", () => {
+//   toggleTheme();
+// });

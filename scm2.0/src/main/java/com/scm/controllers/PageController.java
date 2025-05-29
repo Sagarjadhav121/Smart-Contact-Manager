@@ -4,6 +4,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+
 
 
 @Controller
@@ -48,6 +54,16 @@ public class PageController {
       return "signup";
     }
  
-
+    @RequestMapping(value="/do-register", method=RequestMethod.POST)  
+    public String processRegister() {
+      //fetch-data
+      //validate data
+      //save to databse
+      //message-"registration successful"
+      //redirect to login page
+        
+      return "redirect:/login";
+    }
+    
 
 }
